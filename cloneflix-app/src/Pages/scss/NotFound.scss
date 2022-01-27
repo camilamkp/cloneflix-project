@@ -1,0 +1,57 @@
+$height: 70px;
+$blackish: #141414;
+$red: #e50914;
+$gray: #8c8c8c;
+$cloneflix: #bd0602;
+
+$layout-breakpoint-mobile-first: 640px;
+$layout-breakpoint-tablet: 768px;
+$layout-breakpoint-desktop: 1024px;
+
+.not-found
+{
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1
+    {
+        margin: 0 30px;
+        text-align: center;
+    }
+
+    .icon-netflix
+    {
+        width: 150px;
+        height: 150px;
+    }
+    .zurueck-button
+    {
+        padding: 10px;
+        border-radius: 5px;
+        background: $red;
+        color: white;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+
+            &:hover
+            {
+                background: $cloneflix;
+            }
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                min-width: 74px;
+                min-height: 50px;
+                padding: 0;
+                margin: 24px 0 12px;
+            }
+    }
+}

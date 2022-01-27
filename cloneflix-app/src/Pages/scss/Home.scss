@@ -1,0 +1,237 @@
+$height: 70px;
+$blackish: #141414;
+$red: #e50914;
+$cloneflix: #bd0602;
+$gray: #8c8c8c;
+
+$layout-breakpoint-mobile-first: 640px;
+$layout-breakpoint-tablet: 768px;
+$layout-breakpoint-desktop: 1024px;
+
+*
+{
+    box-sizing: border-box;
+}
+
+.home
+{
+    width: 100vw;
+    height: 100vh;
+    padding: 0 30px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 100%
+    ),
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/20876cab-b49d-4957-bbaf-906ceb1c05f1/825a5383-3b30-4b01-86bd-26191bc6efc6/DE-en-20220117-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-size: cover;
+    position: relative;
+
+    @media ( max-width: $layout-breakpoint-tablet )
+    {
+        width: 100%;
+        min-height: 550px;
+        padding: 20px 0 30px;
+    }
+
+    header
+    {
+        height: 70px;
+        z-index:999;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background: linear-gradient(
+            to top,
+            rgba(0,0,0,0) -60%,
+            rgba(0,0,0,1) 100%
+        );
+
+        @media ( max-width: $layout-breakpoint-tablet )
+        {
+            height: 45px;
+            padding-top: 20px;
+            
+        }
+
+        .header-logo
+        {
+            height: 50px;
+            
+            img
+            {
+                height: 100%;
+            }
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                height: 25px;
+                
+            }
+        }
+    }
+    
+    .button
+    {
+        margin-right: 5px;
+        .login-button
+            {
+                border-radius: 3px;
+                border: none;
+                background: $red;
+                color: white;
+                padding: 6px 8px;
+                cursor: pointer;
+
+                &:hover
+                {
+                    background: $cloneflix;
+                }
+
+            }
+    }
+
+        .container
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                height: 550px;
+                position: relative;
+                padding: 70px 5%;
+                margin: 3px 0 0 0;
+                font-size: 18px;
+                // justify-content: space-evenly;
+            }
+
+            h1
+            {
+                font-size: 50px;
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    font-size: 1.75rem;
+                    margin: 0;
+                    line-height: 1.1;
+                }
+            }
+
+            h2
+            {
+                margin-top: 10px;
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                }
+            }
+
+            p
+            {
+                font-size: 20px;
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .input
+            {
+                width: 50%;
+                height: 50px;
+                // background: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                border-radius: 2px;
+
+                &:last-child
+                {
+                    color: red;
+                }
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    height: 80px;
+                    width: 100%;
+                    margin-top: 20px;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    
+                }
+                @media ( min-width: $layout-breakpoint-tablet )
+                {
+                    &:last-child
+                    {
+                        background: white;
+                    }
+                }
+
+                input
+                {
+                    flex: 9;
+                    height: 100%;
+                    border: none;
+                    padding: 0 10px;
+                    outline: none;
+
+                    @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    // height: 80px;
+                    width: 100%;
+                    padding: 15px;
+                    
+                }
+
+                }
+
+                .registerButton
+                {
+                    flex: 3;
+                    height: 100%;
+                    background: $red;
+                    border: none;
+                    color: white;
+                    font-size: 20px;
+
+                    span
+                    {
+                        margin-left: 5px;
+                    }
+                    
+                    &:hover
+                    {
+                        background: $cloneflix;
+                    }
+
+                    @media ( max-width: $layout-breakpoint-tablet )
+                    {
+                        margin-top: 15px;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        padding: 8px 10px;
+                        font-size: 16px;
+                        border-radius: 3px;
+                        
+                    }
+                }
+            }
+
+        }
+}

@@ -1,0 +1,84 @@
+$margin-bottom: 30px;
+$img-width: 150px;
+$padding-left: 30px;
+
+$layout-breakpoint-mobile-first: 640px;
+$layout-breakpoint-tablet: 768px;
+$layout-breakpoint-desktop: 1024px;
+
+.movieList-container
+{
+    margin-bottom: $margin-bottom;
+
+    h2
+    {
+        margin: 0px 0px 0px 30px;
+    }
+
+    .movieList-left, .movieList-right
+    {
+        position: absolute;
+        width: 40px;
+        height: 225px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: all ease 0.5s;
+  
+        &:hover
+        {
+            opacity: 1;
+        }
+
+        @media ( max-width: $layout-breakpoint-tablet )
+        {
+            opacity: 1;
+        }
+
+    }
+
+    .movieList-left
+    {
+        left: 0;
+    }
+
+    .movieList-right
+    {
+        right: 0;
+    }
+
+    .movieList-section
+    {
+        overflow-x: hidden;
+        padding-left: $padding-left;
+
+        .movieList-row
+        {
+            transition: all ease 0.5s;
+
+            .movieList-item
+            {
+                display: inline-block;
+                width: $img-width;
+                
+                img
+                {
+                    width: 100%;
+                    transform: scale(0.9);
+                    transition: all ease 0.2s;
+                    cursor: pointer;
+                    &:hover
+                    {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+    }
+
+}

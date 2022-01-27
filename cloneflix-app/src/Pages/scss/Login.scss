@@ -1,0 +1,209 @@
+$height: 70px;
+$blackish: #141414;
+$red: #e50914;
+$gray: #8c8c8c;
+
+$layout-breakpoint-mobile-first: 640px;
+$layout-breakpoint-tablet: 768px;
+$layout-breakpoint-desktop: 1024px;
+
+*
+{
+    box-sizing: border-box;
+}
+
+.login
+{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 30px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 100%
+    ),
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/20876cab-b49d-4957-bbaf-906ceb1c05f1/825a5383-3b30-4b01-86bd-26191bc6efc6/DE-en-20220117-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-size: cover;
+    position: relative;
+
+    @media ( max-width: $layout-breakpoint-tablet )
+    {
+        width: 100%;
+        min-height: 550px;
+        padding: 20px 0 30px;
+        background: $blackish;
+    }
+
+    header
+    {
+        height: 70px;
+        z-index:999;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        background: transparent;
+
+        @media ( max-width: $layout-breakpoint-tablet )
+        {
+            height: 45px;
+            padding: 0 10px;
+            
+        }
+
+        .header-logo
+        {
+            height: 50px;
+            margin: 30px 0 5px 15px; 
+            
+            img
+            {
+                height: 100%;
+            }
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                height: 25px;
+                
+            }
+        }
+    }
+
+    .container
+    {
+        width: 100%;
+        height: 100%;
+        padding: 60px 68px 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media ( max-width: $layout-breakpoint-tablet )
+        {
+            width: 100%;
+            min-height: 550px;
+            padding: 20px 0 30px;
+        }
+
+        h1
+        {
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                margin: 0 0 10px 0;
+            }
+        }
+
+    }
+
+    .form
+    {
+        width: 350px;
+        height: 400px;
+        padding: 30px;
+        border-radius: 5px;
+        background: rgba(0,0,0,.75);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @media ( max-width: $layout-breakpoint-tablet )
+        {
+            width: 80%;
+            height: 80%;
+            padding: 10px 0 5px;
+            background: $blackish;
+
+        }
+
+        input
+        {
+            padding: 15px;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+
+            &::placeholder
+            {
+                color: $gray;
+            }
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+            }
+        }
+
+        .login-button
+        {
+            padding: 10px;
+            border-radius: 5px;
+            background: $red;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                min-width: 74px;
+                min-height: 50px;
+                padding: 0;
+                margin: 24px 0 12px;
+            }
+        }
+
+        span
+        {
+            color: $gray;
+            font-size: 15px;
+            margin-top: 25px;
+            text-align: center;
+
+            b
+            {
+                color: white;
+            }
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                margin-top: 30px;
+    
+            }
+            
+        }
+        small
+        {
+            color: $gray;
+            font-size: 10px;
+            text-align: center;
+            margin-top: 45px;
+
+            b
+            {
+                color: blue;
+            }
+
+            @media ( max-width: $layout-breakpoint-tablet )
+            {
+                margin-top: 25px;
+                font-size: 9px;
+            }
+        }
+    }
+}

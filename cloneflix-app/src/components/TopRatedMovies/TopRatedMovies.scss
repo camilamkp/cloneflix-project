@@ -1,0 +1,163 @@
+$green: #46d369;
+$gray: #999;
+$whitish: #FFF;
+$margin: 15px;
+
+$layout-breakpoint-mobile-first: 640px;
+$layout-breakpoint-tablet: 768px;
+$layout-breakpoint-desktop: 1024px;
+
+.top-rated
+{
+    height: 100vh;
+
+    @media ( max-width: $layout-breakpoint-tablet )
+    {
+        height: 90vh;
+    }
+
+
+    .top-rated-y, .top-rated-x
+    {
+        width: inherit;
+        height: inherit;
+    }
+
+    .top-rated-y
+    {
+        background: linear-gradient(to top, #111 10%, transparent 90%);
+
+        .top-rated-x
+        {
+            background: linear-gradient(to right, #111 30%, transparent 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 30px;
+            padding-bottom: 150px;
+            padding-top: 70px;
+
+            .top-rated-name, .top-rated-info
+            {
+                font-weight: 700;
+            }
+
+            .top-rated-name
+            {
+                font-size: 60px;
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    font-size: 40px;
+                }
+            }
+
+            .top-rated-info
+            {
+                font-size: 18px;
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    font-size: 16px;
+                }
+
+                .top-rated-points, .top-rated-year, .top-rated-seasons
+                {
+                    display: inline-block;
+                    margin-right: $margin;
+                }
+
+                .top-rated-points
+                {
+                    color: $green;
+                }
+
+            }
+
+            .top-rated-description
+            {
+                margin-top: $margin;
+                font-size: 20px;
+                color: $gray;
+                max-width: 40%;
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    font-size: 14px;
+                    max-width: 100%;
+                    margin-right: $margin * 2;
+                }
+
+            }
+
+            .top-rated-buttons
+            {
+                margin-top: $margin;
+
+                .top-rated-mehr-button , .top-rated-liste-button
+                {
+                    display: inline-block;
+                    font-size: 20px;
+                    font-weight: 700;
+                    padding: 12px 25px;
+                    border-radius: 5px;
+                    margin-right: ($margin - 5);
+                    text-decoration: none;
+                    opacity: 1;
+                    transition: all ease-in-out 0.2s;
+
+                    @media ( max-width: $layout-breakpoint-tablet )
+                    {
+                        padding: 10px;
+                    }
+
+
+                    &:hover
+                    {
+                        opacity: 0.7;
+                    }
+
+                    @media ( max-width: $layout-breakpoint-tablet )
+                    {
+                        font-size: 16px;
+                    }
+                }
+
+                .top-rated-mehr-button
+                {
+                    background: $whitish;
+                    color: #000;
+
+                    svg
+                    {
+                        margin-right: 5px;
+                    }
+                }
+
+                .top-rated-liste-button
+                {
+                    background: #333;
+                    color: $whitish;
+
+                    svg
+                    {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .top-rated-genres
+            {
+                margin-top: $margin;
+                font-size: 18px;
+                color: $gray;
+
+                @media ( max-width: $layout-breakpoint-tablet )
+                {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}
